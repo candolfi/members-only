@@ -1,8 +1,9 @@
 class PostsController < ApplicationController
 
-    before_action :require_login
+    before_action :authenticate_user!
 
   def new
+    @post = Post.new
   end
 
   def create
@@ -13,11 +14,11 @@ class PostsController < ApplicationController
 
   private
 
-  def require_login
-    if current_user.logged_in?
-        #insert code
-    else
-        redirect_to login_path
-    end
-  end
+#   def require_login
+#     if user_signed_in?
+#       redirect_to root_path
+#     else
+#         redirect_to root_path
+#     end
+#   end
 end
