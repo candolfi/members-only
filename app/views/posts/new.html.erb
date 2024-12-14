@@ -3,13 +3,16 @@
     <div>
         <%= form.label :title %>
         <%= form.text_field :title %><br>
-        <%= form.label :contents %>
-        <%= form.text_area :contents %><br>
+        <%= form.label :content %>
+        <%= form.text_area :content %><br>
     </div>
     <div>
-        <%= form.submit %>
+        <%= form.submit "Submit"%>
     </div>
+
 <% end %>
+
+<%= button_to "Sign Out", destroy_user_session_path, method: :delete %>
 
 
 
