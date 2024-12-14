@@ -2,11 +2,9 @@
 <%= form_with model: @post do |form| %>
     <div>
         <%= form.label :title %>
-        <%= form.text_field :title %>
+        <%= form.text_field :title %><br>
         <%= form.label :contents %>
-        <%= form.textarea :contents %>
-        <%= form.label :author %>
-        <%= form.text_field :author %>
+        <%= form.text_area :contents %><br>
     </div>
     <div>
         <%= form.submit %>
